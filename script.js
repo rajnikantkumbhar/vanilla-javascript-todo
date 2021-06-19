@@ -125,19 +125,34 @@ function deleteTodo(event)
 
 function deleteAllTodo()
 { 
-    const allToDos = document.querySelectorAll('.todo');
+    document.querySelector('.modal-container').style.display='flex';
+    const btnYes=document.querySelector('.btn-yes');
+    const btnNo=document.querySelector('.btn-no');
 
-    allToDos.forEach(function(todo){
-        todo.classList.add('fall');
-        todo.ontransitionend = () => {
-            todo.remove();
-        }
+    btnYes.addEventListener('click',()=>{
+        document.querySelector('.modal-container').style.display='none';
+        const allToDos = document.querySelectorAll('.todo');
+
+        allToDos.forEach(function(todo){
+            todo.classList.add('fall');
+            todo.ontransitionend = () => {
+                todo.remove();
+            }
+        });
+        todoFilterBox.style.display='none';
+        blank.style.display='block';
+    
+        //delete from local storage
+        localStorage.setItem('todos',JSON.stringify([]));
     });
-    todoFilterBox.style.display='none';
-    blank.style.display='block';
 
-    //delete from local storage
-    localStorage.setItem('todos',JSON.stringify([]));
+    btnNo.addEventListener('click',closeModal);
+    document.getElementById('btn-close').addEventListener('click',closeModal);
+
+    function closeModal(){
+        document.querySelector('.modal-container').style.display='none';
+    }
+
 }
 
 function completeTodo(event)
