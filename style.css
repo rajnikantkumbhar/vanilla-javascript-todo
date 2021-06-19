@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url(images/bg.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blank{
+    margin-top:2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background:rgba(255, 255, 255);
+    min-height: 30rem;
+    min-width: 15rem;
+    padding: 2.5rem;
+    border-radius: .5rem;
+    color: #202040;
+    gap: 1rem;
+}
+.card h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.todo-input{
+    padding: 1rem;
+    width: 15rem;
+    outline: none;
+    border: 1px solid #ddd;
+    border-right: hidden;
+    height: 3rem;
+    margin-right:0;
+    font-size: 1rem;
+}
+
+.todo-input:focus{
+    border: 1px solid #FFBD69;
+    border-right: hidden;
+    transition: .5s;
+}
+
+.todo-button{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    background:#fcb65b;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.todo-button:hover{
+    background:#f3a642;
+    transition: .5s;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list{
+    list-style: none;
+}
+
+.todo-container{
+    max-height: 15rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.todo{
+    margin:.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgb(243, 243, 243);
+    transition: all ease .5s;
+}
+
+.todo button{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    font-size: .8rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: .8;
+}
+.todo button:hover{
+    opacity: 1;
+    transition: .4s;
+}
+
+.todo-item{
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1rem;
+    flex: 1;
+    font-size: .8rem;
+}
+
+.comp-btn{
+    background: #3cc283;
+}
+.trash-btn{
+    background: #FF6363;
+}
+
+.fas{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: .6;
+}
+
+.fall{
+    transform: translateX(-8rem);
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.filter-box{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-box button{
+    background: #FF6363;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    padding: 0 1rem;
+    color: #fff;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.filter-box button:hover{
+    opacity: 1;
+    transition: .4s;
+}
+
+.filter-box select{
+    flex: 1;
+    height: 2.5rem;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: .5rem;
+    cursor: pointer;
+}

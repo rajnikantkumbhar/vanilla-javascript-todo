@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajni's ToDo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h1>Rajni's ToDo List</h1>
+            <form action="">
+                <input type="text" placeholder="Your new task" class="todo-input">
+                <button class="todo-button" type="submit"><i class="fas fa-plus"></i></button>
+            </form>
+            <div class="todo-container">
+                <ul class="filter-box">
+                    <button class="delete-all-btn">Delete All</button>
+                    <select name="todos" class="filter-select">
+                        <option value="all" selected>All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                 </ul>
+                <ul class="todo-list">
+                   <h4 class="blank">No tasks</h4>
+                </ul>
+            </div>
+        </div>
+        
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
